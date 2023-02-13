@@ -13,11 +13,11 @@ def SysContinuous(Ac,Bc,Cc,Dc,plot):
         # vetor de tempo 
         tvec = np.arange(0,50,1)
 
-        # dados
+        # data
         tout0, yout0 = step_response(sysc,T=tvec,input=0) # data 1
         tout1, yout1 = step_response(sysc,T=tvec,input=1) # data 2
 
-        # figura 
+        # plot 
         figure = plt.figure()
         # plt.suptitle('Step response')
 
@@ -53,7 +53,7 @@ def SysContinuous(Ac,Bc,Cc,Dc,plot):
         plt.ylim([-7,7])
         plt.grid(True)
 
-        # legendas adicionais
+        # extra label
         figure.add_subplot(111, frame_on=False)
         plt.tick_params(labelcolor="none", bottom=False, left=False)
         plt.xlabel("Time (s)")
